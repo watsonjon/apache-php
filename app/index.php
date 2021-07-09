@@ -1,3 +1,3 @@
 <?php 
-    echo '<h1>Hello GEE CEE PEE!</h1>'; 
+    echo '<img src="trinity.jpg" alt="Hello GEE CEE PEE!" style="width: 100%"/>'; 
 ?> 
