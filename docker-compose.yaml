@@ -4,6 +4,7 @@ services:
     build: app
     ports: 
       - '80:80'
+    # adding a comment
     volumes:
       - ./app:/var/www/html/
       
