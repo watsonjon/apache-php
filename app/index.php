@@ -1,3 +1,20 @@
-<?php 
-    echo '<html><head><meta property="og:title" content="Them Guys"><meta property="og:description" content="These are people who made the things you have. Enjoy!"><meta property="og:image" content="trinity.jpg"></head><body><img src="trinity.jpg" alt="Hello GEE CEE PEE!" style="width: 100%"/></body></html>'; 
-?> 
+<?php
+
+$request = $_SERVER['REQUEST_URI'];
+
+switch ($request) {
+    case '/' :
+        require __DIR__ . '/views/trinity.php';
+        break;
+    case '' :
+        require __DIR__ . '/views/trinity.php';
+        break;
+    case '/healthz' :
+        require __DIR__ . '/views/healthz.php';
+        break;
+    default:
+        http_response_code(404);
+        require __DIR__ . '/views/404.php';
+        break;
+}
+>
