@@ -12,6 +12,9 @@ switch ($request) {
     case '/healthz' :
         require __DIR__ . '/views/healthz.php';
         break;
+    case '/livez' :
+        require __DIR__ . '/views/livez.php';
+        break;
     default:
         http_response_code(404);
         require __DIR__ . '/views/404.php';
