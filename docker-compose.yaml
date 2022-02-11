@@ -1,10 +1,16 @@
 version: "3.7"
+
 services:
   web:
+    labels: &xlabels
+      name: web
+      lang: PHP
     build: app
-    ports: 
-      - '80:80'
+    ports:
+      - "80:80"
     # adding a comment
     volumes:
       - ./app:/var/www/html/
-      
+    deploy:
+      labels:
+        <<: *xlabels
